@@ -6,12 +6,13 @@ test("create on appointment", () => {
   const startsAt = new Date();
   const endsAt = new Date();
 
-  endsAt.setDate(endsAt.getDate() + 1);
+  startsAt.setDate(startsAt.getDate() + 1);
+  endsAt.setDate(endsAt.getDate() + 2);
 
   const appointment = new Appointment({
     customer: "Jon",
     startsAt,
-    endsAt
+    endsAt,
   });
 
   expect(appointment).instanceOf(Appointment);
@@ -22,7 +23,8 @@ test("cannot create on appointment with end date before start date", () => {
   const startsAt = new Date();
   const endsAt = new Date();
 
-  endsAt.setDate(endsAt.getDate() - 1);
+  startsAt.setDate(startsAt.getDate() + 2);
+  endsAt.setDate(endsAt.getDate() + 1);
 
   expect(() => {
     return new Appointment({
