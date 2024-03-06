@@ -1,6 +1,8 @@
-# API SOLID
+# API com uso de principios do solid
 
 Esta é uma API desenvolvida em TypeScript e Node.js, seguindo os princípios do SOLID e uma arquitetura bem definida. Todos os componentes foram cuidadosamente projetados para garantir uma aplicação robusta e de fácil manutenção.
+
+![Image Preview](https://github.com/DevJoaoPeu/api-solid/blob/main/public/printscreen.png)
 
 ## Estrutura do Projeto
 
