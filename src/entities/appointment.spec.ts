@@ -1,13 +1,11 @@
 import { test } from "@vitest/runner";
 import { Appointment } from "./appointment";
 import { expect } from "chai";
+import { getFutureDate } from "../tests/utils/get-future-date";
 
 test("create on appointment", () => {
-  const startsAt = new Date();
-  const endsAt = new Date();
-
-  startsAt.setDate(startsAt.getDate() + 1);
-  endsAt.setDate(endsAt.getDate() + 2);
+  const startsAt = getFutureDate("2024-04-10");
+  const endsAt = getFutureDate("2024-04-11");
 
   const appointment = new Appointment({
     customer: "Jon",
